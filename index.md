@@ -1,37 +1,59 @@
-## Welcome to GitHub Pages
+# User Guide
 
-You can use the [editor on GitHub](https://github.com/kangxinwang/ip/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Features 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### View tasks in list: `list`
+Lists down the tasks that has been added.
+###Format: `list`
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Expected outcome:
+```text
+Here are the tasks in your list:
+1.[T][ ]  run
+2.[D][ ]  return book (by: Sunday)
+3.[E][ ]  attend lecture (at: 5pm)
+```
+### Mark task as completed: `done`
+Marks a task at a specific index as completed
+###Format: `done INDEX`
+Expected outcome:
+```text
+Nice! I've marked this task as done:
+[T][✘]  run
+```
+### Add a todo task: `todo`
+Add a todo task to the task list
+###Format: `todo DESCRIPTION`
+Expected outcome:
+```text
+Got it. I've added this task: 
+[T][ ]  run
+Now you have 1 tasks in the list.
+```
+### Add a deadline task: `deadline`
+Add a deadline task to the task list
+###Format: `deadline DESCRIPTION /by TIME`
+Expected outcome:
+```text
+Got it. I've added this task: 
+[D][ ]  submit assignment (by: Sunday 2359)
+Now you have 4 tasks in the list.
+```
+### Add an event task: `event`
+Add an event task to the task list
+###Format: `event DESCRIPTION /at TIME`
+Expected outcome:
+```text
+Got it. I've added this task: 
+[E][ ]  attend tutorial (at: Monday 1430)
+Now you have 5 tasks in the list.
+```
+### Find a task: `find`
+Find a task from the task list
+###Format: `find DESCRIPTION`
+Expected outcome:
+```text
+Here are the matching tasks in your list: 
+1.[D][ ]  submit assignment (by: Sunday 2359)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kangxinwang/ip/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
